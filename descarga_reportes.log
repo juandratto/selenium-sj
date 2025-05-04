@@ -989,3 +989,132 @@ Stack (most recent call last):
 2025-04-21 17:13:36 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.txt
 2025-04-21 17:13:36 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.txt
 2025-04-21 17:13:36 INFO     All Excel files have been processed!
+2025-05-04 15:37:43 INFO     Removed all matched files!
+2025-05-04 15:38:05 INFO     Texfield 'wbof-textfield-username' fill OK
+2025-05-04 15:38:06 INFO     Login exitoso!!!
+2025-05-04 15:38:17 INFO     Menu button is clickable!
+2025-05-04 15:38:17 INFO     Button 'Menu' click OK
+2025-05-04 15:38:22 INFO     Button 'Últimos 7 días' click OK
+2025-05-04 15:38:28 INFO     Button 'Exportar' click OK
+2025-05-04 15:38:33 INFO     Button 'Descargar' click OK
+2025-05-04 15:38:33 INFO     Reporte ventas descargado.
+2025-05-04 15:38:44 INFO     Menu button is clickable!
+2025-05-04 15:38:44 INFO     Button 'Menu' click OK
+2025-05-04 15:38:48 INFO     Button 'Exportar' click OK
+2025-05-04 15:38:53 INFO     Reporte Inventario descargado.
+2025-05-04 15:39:04 INFO     Menu button is clickable!
+2025-05-04 15:39:04 INFO     Button 'Menu' click OK
+2025-05-04 15:39:17 INFO     Reporte Producto descargado.
+2025-05-04 15:39:26 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.txt
+2025-05-04 15:39:26 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.txt
+2025-05-04 15:39:26 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.txt
+2025-05-04 15:39:26 INFO     All Excel files have been processed!
+2025-05-04 15:51:42 INFO     Removed all matched files!
+2025-05-04 15:51:51 INFO     Texfield 'wbof-textfield-username' fill OK
+2025-05-04 15:51:52 INFO     Texfield 'wbof-textfield-password' fill OK
+2025-05-04 15:51:52 INFO     Login exitoso!!!
+2025-05-04 15:52:10 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:552:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes.py", line 52, in menu_button_click
+    menu_button = WebDriverWait(driver, 10).until(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:552:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes.py", line 115, in <module>
+    menu_button_click("wbof-option-menu")
+  File "d:\Personal\selenium-sj\descarga_reportes.py", line 58, in menu_button_click
+    logger.error(e, stack_info=True, exc_info=True)
+2025-05-04 15:52:15 INFO     An unexpected error occurred: Message: Failed to decode response from marionette
+
+2025-05-04 15:52:26 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B1520>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/element
+2025-05-04 15:52:31 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B19D0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/element
+2025-05-04 15:52:35 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B1BB0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/element
+2025-05-04 15:52:39 INFO     An unexpected error occurred: HTTPConnectionPool(host='localhost', port=57240): Max retries exceeded with url: /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B1D90>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+2025-05-04 15:52:43 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2000>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4
+2025-05-04 15:52:47 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2180>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4
+2025-05-04 15:52:51 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2300>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4
+2025-05-04 15:53:08 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2870>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/elements
+2025-05-04 15:53:12 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2A50>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/elements
+2025-05-04 15:53:16 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2C30>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/elements
+2025-05-04 15:53:20 INFO     An unexpected error occurred: HTTPConnectionPool(host='localhost', port=57240): Max retries exceeded with url: /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2E10>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+2025-05-04 15:53:24 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B3050>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4
+2025-05-04 15:53:28 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B3230>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4
+2025-05-04 15:53:33 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B33E0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4
+2025-05-04 15:53:50 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B2180>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/url
+2025-05-04 15:53:54 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B18B0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/url
+2025-05-04 15:53:58 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D102B1EB0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6dc1c69b-c613-4c20-b147-4e57e316a4b4/url
+2025-05-04 15:54:49 INFO     Removed all matched files!
+2025-05-04 15:54:59 INFO     Texfield 'wbof-textfield-username' fill OK
+2025-05-04 15:54:59 INFO     Texfield 'wbof-textfield-password' fill OK
+2025-05-04 15:55:00 INFO     Texfield 'wbof-button-signin' click OK
+2025-05-04 15:55:00 INFO     Login exitoso!!!
+2025-05-04 15:55:11 INFO     Menu button is clickable!
+2025-05-04 15:55:12 INFO     Button 'Menu' click OK
+2025-05-04 15:55:17 INFO     Button 'Últimos 7 días' click OK
+2025-05-04 15:55:22 INFO     Button 'Exportar' click OK
+2025-05-04 15:55:28 INFO     Button 'Descargar' click OK
+2025-05-04 15:55:28 INFO     Reporte ventas descargado.
+2025-05-04 15:55:40 INFO     Menu button is clickable!
+2025-05-04 15:55:41 INFO     Button 'Menu' click OK
+2025-05-04 15:55:44 INFO     Button 'Exportar' click OK
+2025-05-04 15:55:49 INFO     Reporte Inventario descargado.
+2025-05-04 15:56:01 INFO     Menu button is clickable!
+2025-05-04 15:56:02 INFO     Button 'Menu' click OK
+2025-05-04 15:56:15 INFO     Reporte Producto descargado.
+2025-05-04 15:56:23 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.txt
+2025-05-04 15:56:24 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.txt
+2025-05-04 15:56:24 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.txt
+2025-05-04 15:56:24 INFO     All Excel files have been processed!
+2025-05-04 15:57:25 INFO     Removed all matched files!
+2025-05-04 15:57:35 INFO     Texfield 'wbof-textfield-username' fill OK
+2025-05-04 15:57:35 INFO     Texfield 'wbof-textfield-password' fill OK
+2025-05-04 15:57:35 INFO     Texfield 'wbof-button-signin' click OK
+2025-05-04 15:57:35 INFO     Login exitoso!!!
+2025-05-04 15:57:46 INFO     Menu button is clickable!
+2025-05-04 15:57:46 INFO     Button 'Menu' click OK
+2025-05-04 15:57:51 INFO     Button 'Últimos 7 días' click OK
+2025-05-04 15:58:06 INFO     The button 'Exportar' did not load in time.
+2025-05-04 15:58:22 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF1100>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef/elements
+2025-05-04 15:58:26 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF15B0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef/elements
+2025-05-04 15:58:30 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF1790>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef/elements
+2025-05-04 15:58:34 INFO     An unexpected error occurred: HTTPConnectionPool(host='localhost', port=57558): Max retries exceeded with url: /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF1970>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+2025-05-04 15:58:38 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF1BE0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef
+2025-05-04 15:58:42 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF1D60>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef
+2025-05-04 15:58:46 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF1EE0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef
+2025-05-04 15:59:03 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF23F0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef/url
+2025-05-04 15:59:08 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF25D0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef/url
+2025-05-04 15:59:12 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E9DAFF27B0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/77b54cc8-a8d9-4283-bc71-a05cf9c65eef/url
+2025-05-04 16:07:01 INFO     Removed all matched files!
+2025-05-04 16:07:11 INFO     Texfield 'wbof-textfield-username' fill OK
+2025-05-04 16:07:11 INFO     Texfield 'wbof-textfield-password' fill OK
+2025-05-04 16:07:11 INFO     Texfield 'wbof-button-signin' click OK
+2025-05-04 16:07:11 INFO     Login exitoso!!!
+2025-05-04 16:07:23 INFO     Menu button is clickable!
+2025-05-04 16:07:23 INFO     Button 'Menu' click OK
+2025-05-04 16:07:29 INFO     Button 'Últimos 7 días' click OK
+2025-05-04 16:07:34 INFO     Button 'Exportar' click OK
+2025-05-04 16:07:39 INFO     Button 'Descargar' click OK
+2025-05-04 16:07:39 INFO     Reporte ventas descargado.
+2025-05-04 16:07:51 INFO     Menu button is clickable!
+2025-05-04 16:07:52 INFO     Button 'Menu' click OK
+2025-05-04 16:07:55 INFO     Button 'Exportar' click OK
+2025-05-04 16:08:00 INFO     Reporte Inventario descargado.
+2025-05-04 16:08:11 INFO     Menu button is clickable!
+2025-05-04 16:08:12 INFO     Button 'Menu' click OK
+2025-05-04 16:08:25 INFO     Reporte Producto descargado.
+2025-05-04 16:08:32 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.txt
+2025-05-04 16:08:33 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.txt
+2025-05-04 16:08:33 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.txt
+2025-05-04 16:08:33 INFO     All Excel files have been processed!

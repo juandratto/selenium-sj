@@ -64,22 +64,52 @@ def menu_button_click(fname):
 driver.get("https://app.miwally.com/")
 
 # Allow the page to load completely
-time.sleep(3)  # Adjust the sleep time as needed
+#time.sleep(3)  # Adjust the sleep time as needed
 
-# Locate the username/email field and enter the value
-email_field = driver.find_element(By.ID, "wbof-textfield-username")  # Adjust the 'name' attribute if necessary
-email_field.send_keys("juand.ratto@gmail.com")  # Replace with your email
+try:
+    # Locate the username/email field and enter the value
+    email_field = WebDriverWait(driver,5).until(
+        EC.element_to_be_clickable((By.ID, "wbof-textfield-username"))  # Adjust the 'name' attribute if necessary
+    )
+    email_field.send_keys("juand.ratto@gmail.com")  # Replace with your email
+except TimeoutException:
+    logger.info("The button 'wbof-textfield-username' did not load in time.")
+    driver.quit()
+except Exception as e:
+    logger.info(f"An unexpected error occurred: {e}")
+    driver.quit()
+else:
+    logger.info("Texfield 'wbof-textfield-username' fill OK")
 
-# Locate the password field and enter the value
-password_field = driver.find_element(By.ID, "wbof-textfield-password")  # Adjust the 'name' attribute if necessary
-password_field.send_keys("R4tt0Wally$2023")  # Replace with your password
+try:
+    # Locate the password field and enter the value
+    password_field =  WebDriverWait(driver,5).until(
+        EC.element_to_be_clickable((By.ID, "wbof-textfield-password"))  # Adjust the 'name' attribute if necessary
+    )
+    password_field.send_keys("R4tt0Wally$2023")  # Replace with your password
+except TimeoutException:
+    logger.info("Texfield 'wbof-textfield-password' did not load in time.")
+    driver.quit()
+except Exception as e:
+    logger.info(f"An unexpected error occurred: {e}")
+    driver.quit()
+else:
+    logger.info("Texfield 'wbof-textfield-password' fill OK")
 
-# Optionally, submit the form (either by pressing Enter or clicking the login button)
-password_field.send_keys(Keys.RETURN)  # This submits the form by pressing Enter
-
-# Alternatively, you can click the "Login" button:
-login_button = driver.find_element(By.ID, "wbof-button-signin")
-login_button.click()
+try:
+    # Alternatively, you can click the "Login" button:
+    login_button =  WebDriverWait(driver,5).until(
+        EC.element_to_be_clickable((By.ID, "wbof-button-signin"))
+    )
+    login_button.click()
+except TimeoutException:
+    logger.info("The button 'wbof-button-signin' did not load in time.")
+    driver.quit()
+except Exception as e:
+    logger.info(f"An unexpected error occurred: {e}")
+    driver.quit()
+else:
+    logger.info("Texfield 'wbof-button-signin' click OK")
 
 logger.info("Login exitoso!!!")
 
@@ -100,8 +130,10 @@ try:
     button.click()
 except TimeoutException:
     logger.info("The button 'Últimos 7 días' did not load in time.")
+    driver.quit()
 except Exception as e:
     logger.info(f"An unexpected error occurred: {e}")
+    driver.quit()
 else:
     logger.info("Button 'Últimos 7 días' click OK")
 
@@ -114,8 +146,10 @@ try:
     button.click()
 except TimeoutException:
     logger.info("The button 'Exportar' did not load in time.")
+    driver.quit()
 except Exception as e:
     logger.info(f"An unexpected error occurred: {e}")
+    driver.quit()
 else:
     logger.info("Button 'Exportar' click OK")
 
@@ -133,8 +167,10 @@ try:
         second_button.click()
 except TimeoutException:
     logger.info("The button 'Descargar' did not load in time.")
+    driver.quit()
 except Exception as e:
     logger.info(f"An unexpected error occurred: {e}")
+    driver.quit()
 else:
     logger.info("Button 'Descargar' click OK")
     logger.info("Reporte ventas descargado.")
