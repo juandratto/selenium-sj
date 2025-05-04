@@ -1,0 +1,991 @@
+INFO:__main__:Removed all matched files!
+DEBUG:selenium.webdriver.common.selenium_manager:Selenium Manager binary found at: d:\Personal\selenium-sj\selenium\webdriver\common\windows\selenium-manager.exe
+DEBUG:selenium.webdriver.common.selenium_manager:Executing process: d:\Personal\selenium-sj\selenium\webdriver\common\windows\selenium-manager.exe --browser firefox --debug --language-binding python --output json
+DEBUG:selenium.webdriver.common.selenium_manager:Sending stats to Plausible: Props { browser: "firefox", browser_version: "", os: "windows", arch: "amd64", lang: "python", selenium_version: "4.25" }
+DEBUG:selenium.webdriver.common.selenium_manager:geckodriver not found in PATH
+DEBUG:selenium.webdriver.common.selenium_manager:firefox not found in PATH
+DEBUG:selenium.webdriver.common.selenium_manager:Running command: REG QUERY HKCU\Software\Mozilla\Mozilla Firefox /v CurrentVersion
+DEBUG:selenium.webdriver.common.selenium_manager:Output: ""
+DEBUG:selenium.webdriver.common.selenium_manager:firefox not found in the system
+DEBUG:selenium.webdriver.common.selenium_manager:Required browser: firefox 135.0
+DEBUG:selenium.webdriver.common.selenium_manager:firefox 135.0 already exists
+DEBUG:selenium.webdriver.common.selenium_manager:firefox 135.0 is available at C:\Users\juan.ratto\.cache\selenium\firefox\win64\135.0\firefox.exe
+DEBUG:selenium.webdriver.common.selenium_manager:Valid geckodriver versions for firefox 135: ["0.35.0", "0.34.0"]
+DEBUG:selenium.webdriver.common.selenium_manager:Required driver: geckodriver 0.35.0
+DEBUG:selenium.webdriver.common.selenium_manager:geckodriver 0.35.0 already in the cache
+DEBUG:selenium.webdriver.common.selenium_manager:Driver path: C:\Users\juan.ratto\.cache\selenium\geckodriver\win64\0.35.0\geckodriver.exe
+DEBUG:selenium.webdriver.common.selenium_manager:Browser path: C:\Users\juan.ratto\.cache\selenium\firefox\win64\135.0\firefox.exe
+DEBUG:selenium.webdriver.common.service:Started executable: `C:\Users\juan.ratto\.cache\selenium\geckodriver\win64\0.35.0\geckodriver.exe` in a child process with pid: 12536 using 0 to output -3
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'moz:firefoxOptions': {'binary': 'C:\\Users\\juan.ratto\\.cache\\selenium\\firefox\\win64\\135.0\\firefox.exe', 'prefs': {'remote.active-protocols': 3, 'browser.download.folderList': 2, 'browser.download.dir': 'D:\\ETL\\Procesos\\FerreteriaSanJuan', 'browser.download.useDownloadDir': True, 'browser.helperApps.neverAsk.saveToDisk': 'application/pdf'}, 'args': ['--headless']}}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:57598
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"sessionId":"202e308e-2ac4-4049-a344-6fe2b3b56360","capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"135.0","moz:accessibilityChecks":false,"moz:buildID":"20250130195129","moz:debuggerAddress":"127.0.0.1:57599","moz:geckodriverVersion":"0.35.0","moz:headless":true,"moz:platformVersion":"10.0","moz:processID":31412,"moz:profile":"C:\\Users\\JUAN~1.RAT\\AppData\\Local\\Temp\\rust_mozprofileCTNC9K","moz:shutdownTimeout":60000,"moz:webdriverClick":true,"moz:windowless":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"}}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '843', 'date': 'Mon, 17 Feb 2025 15:00:46 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/url {'url': 'https://app.miwally.com/'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/url HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:00:53 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'css selector', 'value': '[id="wbof-textfield-username"]'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f501a983-7433-4af6-84a8-6e20a06ea822"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:14 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/f501a983-7433-4af6-84a8-6e20a06ea822/value {'text': 'juand.ratto@gmail.com', 'value': ['j', 'u', 'a', 'n', 'd', '.', 'r', 'a', 't', 't', 'o', '@', 'g', 'm', 'a', 'i', 'l', '.', 'c', 'o', 'm']}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/f501a983-7433-4af6-84a8-6e20a06ea822/value HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:14 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'css selector', 'value': '[id="wbof-textfield-password"]'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"88a7b95a-5c79-495e-8d63-4a1c9a9d475a"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:14 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/88a7b95a-5c79-495e-8d63-4a1c9a9d475a/value {'text': 'R4tt0Wally$2023', 'value': ['R', '4', 't', 't', '0', 'W', 'a', 'l', 'l', 'y', '$', '2', '0', '2', '3']}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/88a7b95a-5c79-495e-8d63-4a1c9a9d475a/value HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:14 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/88a7b95a-5c79-495e-8d63-4a1c9a9d475a/value {'text': '\ue006', 'value': ['\ue006']}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/88a7b95a-5c79-495e-8d63-4a1c9a9d475a/value HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:14 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'css selector', 'value': '[id="wbof-button-signin"]'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"65076658-3696-4c49-945d-be7bca4ed682"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:14 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/65076658-3696-4c49-945d-be7bca4ed682/click {}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/65076658-3696-4c49-945d-be7bca4ed682/click HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:14 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/url {'url': 'https://app.miwally.com/Report/Detail'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/url HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:21 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:24 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:24 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:25 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:25 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:26 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:26 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:27 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:27 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:28 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:28 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:29 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:29 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:30 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:30 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:31 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:31 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:32 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:32 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:34 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 404 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=404 | data={"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/button[1]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '491', 'date': 'Mon, 17 Feb 2025 15:01:34 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"ad4f580e-93d9-4198-8e2b-a032a993db0c"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:35 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/di...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"3fb259ba-1918-4b35-8cf8-8f33fdf8c92e"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:35 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': '3fb259ba-1918-4b35-8cf8-8f33fdf8c92e'}]}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/execute/sync HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:35 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/3fb259ba-1918-4b35-8cf8-8f33fdf8c92e/enabled {}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "GET /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/3fb259ba-1918-4b35-8cf8-8f33fdf8c92e/enabled HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:35 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'css selector', 'value': '[id="wbof-option-menu"]'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"e8858f35-5686-4d78-b9b1-aad921ea8aa9"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:35 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/e8858f35-5686-4d78-b9b1-aad921ea8aa9/click {}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/e8858f35-5686-4d78-b9b1-aad921ea8aa9/click HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:35 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div/main/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div/bu...'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"8a3f2ca2-5f57-4ad3-b310-69539547cc7d"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:39 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/8a3f2ca2-5f57-4ad3-b310-69539547cc7d/click {}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/8a3f2ca2-5f57-4ad3-b310-69539547cc7d/click HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 17 Feb 2025 15:01:39 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element {'using': 'xpath', 'value': '/html/body/div[5]/div/div/div[1]/main/div/div[2]/div/div[2]/div[1]/div[1]/div[3]/button'}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element HTTP/11" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"312e9f55-3dff-44cb-925d-b9a7a7224e4f"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 17 Feb 2025 15:01:42 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:57598/session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/312e9f55-3dff-44cb-925d-b9a7a7224e4f/click {}
+DEBUG:urllib3.connectionpool:http://localhost:57598 "POST /session/202e308e-2ac4-4049-a344-6fe2b3b56360/element/312e9f55-3dff-44cb-925d-b9a7a7224e4f/click HTTP/11" 400 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=400 | data={"value":{"error":"element click intercepted","message":"Element <button class=\"v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3\" type=\"button\"> is not clickable at point (1281,134) because another element <div id=\"loadingContent\" class=\"d-flex justify-center align-center icon\"> obscures it","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5\nElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5\nwebdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11\ninteraction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11\nclickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31\n"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '935', 'date': 'Mon, 17 Feb 2025 15:01:42 GMT'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+INFO:__main__:Removed all matched files!
+2025-02-19 23:01:41 INFO     Removed all matched files!
+2025-02-19 23:02:39 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-19 23:02:39 INFO     The div is clickable!
+2025-02-19 23:03:01 INFO     Reporte ventas descargado.
+2025-02-19 23:03:21 INFO     Reporte Inventario descargado.
+2025-02-19 23:03:50 INFO     Reporte Producto descargado.
+2025-02-19 23:04:00 INFO     All Excel files have been processed!
+2025-02-23 10:36:19 INFO     Removed all matched files!
+2025-02-23 10:36:46 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 10:36:46 INFO     The div is clickable!
+2025-02-23 10:37:09 INFO     Reporte ventas descargado.
+2025-02-23 10:37:29 INFO     Reporte Inventario descargado.
+2025-02-23 10:37:54 INFO     Reporte Producto descargado.
+2025-02-23 10:38:01 INFO     All Excel files have been processed!
+2025-02-23 10:41:44 INFO     Removed all matched files!
+2025-02-23 10:42:25 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 77, in <module>
+    report_element = WebDriverWait(driver, 15).until(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+
+2025-02-23 10:42:25 INFO     The div is clickable!
+2025-02-23 11:04:53 INFO     Removed all matched files!
+2025-02-23 11:05:16 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 11:05:16 INFO     The div is clickable!
+2025-02-23 11:05:38 INFO     Reporte ventas descargado.
+2025-02-23 11:05:59 INFO     Reporte Inventario descargado.
+2025-02-23 11:06:25 INFO     Reporte Producto descargado.
+2025-02-23 11:06:32 INFO     All Excel files have been processed!
+2025-02-23 11:08:04 INFO     Removed all matched files!
+2025-02-23 11:08:27 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 11:08:27 INFO     The div is clickable!
+2025-02-23 11:08:49 INFO     Reporte ventas descargado.
+2025-02-23 11:09:10 INFO     Reporte Inventario descargado.
+2025-02-23 11:09:37 INFO     Reporte Producto descargado.
+2025-02-23 11:09:44 INFO     All Excel files have been processed!
+2025-02-23 11:10:07 INFO     Removed all matched files!
+2025-02-23 11:10:44 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 77, in <module>
+    report_element = WebDriverWait(driver, 15).until(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 82, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 11:10:44 INFO     The div is clickable!
+2025-02-23 11:21:58 INFO     Removed all matched files!
+2025-02-23 11:22:22 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 11:22:22 INFO     The div is clickable!
+2025-02-23 11:22:44 INFO     Reporte ventas descargado.
+2025-02-23 11:23:04 INFO     Reporte Inventario descargado.
+2025-02-23 11:23:30 INFO     Reporte Producto descargado.
+2025-02-23 11:23:37 INFO     All Excel files have been processed!
+2025-02-23 11:31:07 INFO     Removed all matched files!
+2025-02-23 11:31:30 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 11:31:30 INFO     The div is clickable!
+2025-02-23 11:31:52 INFO     Reporte ventas descargado.
+2025-02-23 11:32:14 INFO     Reporte Inventario descargado.
+2025-02-23 11:32:39 INFO     Reporte Producto descargado.
+2025-02-23 11:32:45 INFO     All Excel files have been processed!
+2025-02-23 11:44:16 INFO     Removed all matched files!
+2025-02-23 11:44:40 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 11:44:40 INFO     The div is clickable!
+2025-02-23 11:45:02 INFO     Reporte ventas descargado.
+2025-02-23 11:45:21 INFO     Reporte Inventario descargado.
+2025-02-23 11:45:46 INFO     Reporte Producto descargado.
+2025-02-23 11:45:53 INFO     All Excel files have been processed!
+2025-02-23 12:00:04 INFO     Removed all matched files!
+2025-02-23 12:00:27 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 12:00:27 INFO     The div is clickable!
+2025-02-23 12:00:49 INFO     Reporte ventas descargado.
+2025-02-23 12:01:11 INFO     Reporte Inventario descargado.
+2025-02-23 12:01:37 INFO     Reporte Producto descargado.
+2025-02-23 12:01:45 INFO     All Excel files have been processed!
+2025-02-23 18:53:54 INFO     Removed all matched files!
+2025-02-23 18:54:18 INFO     El boton menú es clickable!
+2025-02-23 18:54:19 INFO     El boton descarga 7 dias es clickeable!
+2025-02-23 18:54:19 ERROR    Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 95, in <module>
+    day7_button.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 97, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 18:54:19 INFO     El boton descarga reporte de ventas es clickeable!
+2025-02-23 18:54:19 ERROR    Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 108, in <module>
+    download_btn.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 110, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 18:54:24 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 114, in <module>
+    vtaXProd_btn = WebDriverWait(driver, 5).until(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 118, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 18:54:24 ERROR    name 'vtaXProd_btn' is not defined
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 121, in <module>
+    vtaXProd_btn.click()
+    ^^^^^^^^^^^^
+NameError: name 'vtaXProd_btn' is not defined
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 124, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 18:54:44 INFO     Reporte Inventario descargado.
+2025-02-23 18:55:09 INFO     Reporte Producto descargado.
+2025-02-23 18:55:18 INFO     All Excel files have been processed!
+2025-02-23 19:00:46 INFO     Removed all matched files!
+2025-02-23 19:01:10 INFO     El boton menú es clickable!
+2025-02-23 19:01:10 INFO     El boton menú fue clickeado!
+2025-02-23 19:01:10 INFO     El boton descarga 7 dias es clickeable!
+2025-02-23 19:01:10 ERROR    Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 96, in <module>
+    day7_button.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 99, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:01:10 INFO     El boton descarga reporte de ventas es clickeable!
+2025-02-23 19:01:10 ERROR    Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 110, in <module>
+    download_btn.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 113, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:01:15 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 117, in <module>
+    vtaXProd_btn = WebDriverWait(driver, 5).until(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 121, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:01:15 ERROR    name 'vtaXProd_btn' is not defined
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 124, in <module>
+    vtaXProd_btn.click()
+    ^^^^^^^^^^^^
+NameError: name 'vtaXProd_btn' is not defined
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 127, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:01:35 INFO     Reporte Inventario descargado.
+2025-02-23 19:02:02 INFO     Reporte Producto descargado.
+2025-02-23 19:02:10 INFO     All Excel files have been processed!
+2025-02-23 19:10:40 INFO     Removed all matched files!
+2025-02-23 19:11:03 INFO     El boton menú es clickable!
+2025-02-23 19:11:04 INFO     El boton menú fue clickeado!
+2025-02-23 19:11:04 INFO     El boton descarga 7 dias es clickeable!
+2025-02-23 19:11:04 ERROR    Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 96, in <module>
+    day7_button.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 99, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:11:04 INFO     El boton descarga reporte de ventas es clickeable!
+2025-02-23 19:11:04 ERROR    Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 110, in <module>
+    download_btn.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 113, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:11:09 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 117, in <module>
+    vtaXProd_btn = WebDriverWait(driver, 5).until(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 121, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:11:09 ERROR    name 'vtaXProd_btn' is not defined
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 124, in <module>
+    vtaXProd_btn.click()
+    ^^^^^^^^^^^^
+NameError: name 'vtaXProd_btn' is not defined
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 127, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:11:29 INFO     Reporte Inventario descargado.
+2025-02-23 19:11:54 INFO     Reporte Producto descargado.
+2025-02-23 19:12:02 INFO     All Excel files have been processed!
+2025-02-23 19:16:50 INFO     Removed all matched files!
+2025-02-23 19:17:14 INFO     El boton menú es clickable!
+2025-02-23 19:17:14 INFO     El boton menú fue clickeado!
+2025-02-23 19:17:14 INFO     El boton descarga 7 dias es clickeable!
+2025-02-23 19:17:14 ERROR    Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 97, in <module>
+    day7_button.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="date-filter v-btn v-btn--outlined theme--light v-size--default" type="button"> is not clickable at point (782,246) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 100, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:17:14 INFO     El boton descarga reporte de ventas es clickeable!
+2025-02-23 19:17:14 ERROR    Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 111, in <module>
+    download_btn.click()
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <button class="v-btn v-btn--text theme--light v-size--default s-btn mr-1 ml-3" type="button"> is not clickable at point (1195,176) because another element <div id="loadingContent" class="d-flex justify-center align-center icon"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 114, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:17:19 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 118, in <module>
+    vtaXProd_btn = WebDriverWait(driver, 5).until(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 122, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:17:19 ERROR    name 'vtaXProd_btn' is not defined
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 125, in <module>
+    vtaXProd_btn.click()
+    ^^^^^^^^^^^^
+NameError: name 'vtaXProd_btn' is not defined
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_test.py", line 128, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-02-23 19:17:40 INFO     Reporte Inventario descargado.
+2025-02-23 19:18:06 INFO     Reporte Producto descargado.
+2025-02-23 19:18:15 INFO     All Excel files have been processed!
+2025-02-23 19:19:02 INFO     Removed all matched files!
+2025-02-23 19:19:26 INFO     Report page - ReportDetail - loaded successfully.
+2025-02-23 19:19:26 INFO     The div is clickable!
+2025-02-23 19:19:48 INFO     Reporte ventas descargado.
+2025-02-23 19:20:09 INFO     Reporte Inventario descargado.
+2025-02-23 19:20:33 INFO     Reporte Producto descargado.
+2025-02-23 19:20:40 INFO     All Excel files have been processed!
+2025-03-07 15:16:32 INFO     Removed all matched files!
+2025-03-07 15:17:06 INFO     Login exitoso!!!
+2025-03-07 15:17:20 INFO     Report page - ReportDetail - loaded successfully.
+2025-03-07 15:17:20 INFO     The div is clickable!
+2025-03-07 15:17:42 INFO     Reporte ventas descargado.
+2025-03-07 15:18:04 INFO     Reporte Inventario descargado.
+2025-03-07 15:18:29 INFO     Reporte Producto descargado.
+2025-03-07 15:18:39 INFO     All Excel files have been processed!
+2025-03-10 22:08:38 INFO     Removed all matched files!
+2025-03-10 22:09:33 INFO     Removed all matched files!
+2025-03-11 11:32:31 INFO     Removed all matched files!
+2025-03-11 20:27:30 INFO     Removed all matched files!
+2025-03-11 20:27:46 INFO     Login exitoso!!!
+2025-03-11 20:27:57 INFO     Report page - ReportDetail - loaded successfully.
+2025-03-11 20:27:57 INFO     The div is clickable!
+2025-03-11 20:28:19 INFO     Reporte ventas descargado.
+2025-03-11 20:28:40 INFO     Reporte Inventario descargado.
+2025-03-11 20:29:06 INFO     Reporte Producto descargado.
+2025-03-11 20:29:16 INFO     All Excel files have been processed!
+2025-04-11 11:31:30 INFO     Removed all matched files!
+2025-04-11 11:32:04 INFO     Login exitoso!!!
+2025-04-11 11:32:15 INFO     Report page - ReportDetail - loaded successfully.
+2025-04-11 11:32:15 INFO     The div is clickable!
+2025-04-11 11:32:37 INFO     Reporte ventas descargado.
+2025-04-11 11:32:57 INFO     Reporte Inventario descargado.
+2025-04-11 11:33:21 INFO     Reporte Producto descargado.
+2025-04-11 11:33:31 INFO     All Excel files have been processed!
+2025-04-11 11:46:10 INFO     Removed all matched files!
+2025-04-11 11:46:24 INFO     Login exitoso!!!
+2025-04-11 11:46:35 INFO     Report page - ReportDetail - loaded successfully.
+2025-04-11 11:46:35 INFO     The div is clickable!
+2025-04-11 11:49:17 INFO     Removed all matched files!
+2025-04-11 11:49:33 INFO     Login exitoso!!!
+2025-04-11 11:49:44 INFO     Report page - ReportDetail - loaded successfully.
+2025-04-11 11:49:44 INFO     The div is clickable!
+2025-04-11 12:37:39 INFO     Removed all matched files!
+2025-04-11 12:37:55 INFO     Login exitoso!!!
+2025-04-11 12:38:24 ERROR    Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:552:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes copy.py", line 79, in <module>
+    report_element = WebDriverWait(driver, 20).until(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:552:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes copy.py", line 84, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-04-11 12:38:24 INFO     The div is clickable!
+2025-04-11 15:34:35 INFO     Removed all matched files!
+2025-04-11 15:34:49 INFO     Login exitoso!!!
+2025-04-11 15:35:29 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002606EE297F0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/a6e5cc64-6336-471b-b464-1ed1cd49f7a7/element
+2025-04-11 15:35:33 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002606EE2A600>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/a6e5cc64-6336-471b-b464-1ed1cd49f7a7/element
+2025-04-11 15:35:37 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002606EE2A780>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/a6e5cc64-6336-471b-b464-1ed1cd49f7a7/element
+2025-04-11 15:35:41 ERROR    HTTPConnectionPool(host='localhost', port=51178): Max retries exceeded with url: /session/a6e5cc64-6336-471b-b464-1ed1cd49f7a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002606EE2A960>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "d:\Personal\selenium-sj\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "d:\Personal\selenium-sj\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "D:\Programas\Python\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Programas\Python\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "D:\Programas\Python\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "d:\Personal\selenium-sj\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002606EE2A960>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_copy.py", line 92, in <module>
+    clickable_div = WebDriverWait(driver, 10).until(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\support\expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 748, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\webdriver.py", line 352, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\remote_connection.py", line 306, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\selenium\webdriver\remote\remote_connection.py", line 326, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "d:\Personal\selenium-sj\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=51178): Max retries exceeded with url: /session/a6e5cc64-6336-471b-b464-1ed1cd49f7a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002606EE2A960>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+Stack (most recent call last):
+  File "d:\Personal\selenium-sj\descarga_reportes_copy.py", line 97, in <module>
+    logger.error(e, stack_info=True, exc_info=True)
+2025-04-11 15:38:58 INFO     Removed all matched files!
+2025-04-11 15:39:11 INFO     Login exitoso!!!
+2025-04-11 15:39:23 INFO     Menu button is clickable!
+2025-04-11 15:40:45 INFO     Removed all matched files!
+2025-04-11 15:40:59 INFO     Login exitoso!!!
+2025-04-11 15:41:10 INFO     Menu button is clickable!
+2025-04-11 16:11:33 INFO     Removed all matched files!
+2025-04-11 16:11:47 INFO     Login exitoso!!!
+2025-04-11 16:11:59 INFO     Menu button is clickable!
+2025-04-11 16:12:51 INFO     Removed all matched files!
+2025-04-11 16:13:10 INFO     Login exitoso!!!
+2025-04-11 16:13:28 INFO     Menu button is clickable!
+2025-04-11 16:15:54 INFO     Removed all matched files!
+2025-04-11 16:16:09 INFO     Login exitoso!!!
+2025-04-11 16:16:20 INFO     Menu button is clickable!
+2025-04-16 12:29:13 INFO     Removed all matched files!
+2025-04-16 12:29:44 INFO     Login exitoso!!!
+2025-04-16 12:29:56 INFO     Menu button is clickable!
+2025-04-16 12:38:14 INFO     Removed all matched files!
+2025-04-16 12:38:28 INFO     Login exitoso!!!
+2025-04-16 12:38:38 INFO     Menu button is clickable!
+2025-04-21 15:46:16 INFO     Removed all matched files!
+2025-04-21 15:46:29 INFO     Login exitoso!!!
+2025-04-21 15:46:39 INFO     Menu button is clickable!
+2025-04-21 16:05:18 INFO     Removed all matched files!
+2025-04-21 16:05:31 INFO     Login exitoso!!!
+2025-04-21 16:05:43 INFO     Menu button is clickable!
+2025-04-21 16:06:19 INFO     Reporte ventas descargado.
+2025-04-21 16:08:19 INFO     Removed all matched files!
+2025-04-21 16:08:31 INFO     Login exitoso!!!
+2025-04-21 16:08:42 INFO     Menu button is clickable!
+2025-04-21 16:09:18 INFO     Reporte ventas descargado.
+2025-04-21 16:19:07 INFO     Removed all matched files!
+2025-04-21 16:19:19 INFO     Login exitoso!!!
+2025-04-21 16:19:30 INFO     Menu button is clickable!
+2025-04-21 16:19:56 INFO     Reporte ventas descargado.
+2025-04-21 16:35:16 INFO     Removed all matched files!
+2025-04-21 16:35:33 INFO     Login exitoso!!!
+2025-04-21 16:35:50 INFO     Menu button is clickable!
+2025-04-21 16:36:11 INFO     Reporte ventas descargado.
+2025-04-21 16:36:18 INFO     Menu button is clickable!
+2025-04-21 16:44:36 INFO     Removed all matched files!
+2025-04-21 16:44:50 INFO     Login exitoso!!!
+2025-04-21 16:45:01 INFO     Menu button is clickable!
+2025-04-21 16:45:01 INFO     Button 'Menu' click OK
+2025-04-21 16:45:06 INFO     Button 'Últimos 7 días' click OK
+2025-04-21 16:45:21 INFO     The button 'Exportar' did not load in time.
+2025-04-21 16:45:37 INFO     The button 'Descargar' did not load in time.
+2025-04-21 16:45:42 INFO     Reporte ventas descargado.
+2025-04-21 16:45:48 INFO     Menu button is clickable!
+2025-04-21 16:45:48 INFO     Button 'Menu' click OK
+2025-04-21 16:45:57 INFO     Reporte Inventario descargado.
+2025-04-21 16:46:08 INFO     Menu button is clickable!
+2025-04-21 16:46:08 INFO     Button 'Menu' click OK
+2025-04-21 16:46:21 INFO     Reporte Producto descargado.
+2025-04-21 16:46:29 INFO     All Excel files have been processed!
+2025-04-21 16:54:13 INFO     Removed all matched files!
+2025-04-21 16:54:25 INFO     Login exitoso!!!
+2025-04-21 16:54:36 INFO     Menu button is clickable!
+2025-04-21 16:54:36 INFO     Button 'Menu' click OK
+2025-04-21 16:54:41 INFO     Button 'Últimos 7 días' click OK
+2025-04-21 16:54:57 INFO     The button 'Exportar' did not load in time.
+2025-04-21 16:55:12 INFO     The button 'Descargar' did not load in time.
+2025-04-21 16:55:18 INFO     Menu button is clickable!
+2025-04-21 16:55:18 INFO     Button 'Menu' click OK
+2025-04-21 16:55:27 INFO     Reporte Inventario descargado.
+2025-04-21 16:55:38 INFO     Menu button is clickable!
+2025-04-21 16:55:38 INFO     Button 'Menu' click OK
+2025-04-21 16:55:51 INFO     Reporte Producto descargado.
+2025-04-21 16:56:00 INFO     All Excel files have been processed!
+2025-04-21 17:02:36 INFO     Removed all matched files!
+2025-04-21 17:02:47 INFO     Login exitoso!!!
+2025-04-21 17:02:58 INFO     Menu button is clickable!
+2025-04-21 17:02:58 INFO     Button 'Menu' click OK
+2025-04-21 17:03:04 INFO     Button 'Últimos 7 días' click OK
+2025-04-21 17:03:09 INFO     Button 'Exportar' click OK
+2025-04-21 17:03:14 INFO     Button 'Descargar' click OK
+2025-04-21 17:03:14 INFO     Reporte ventas descargado.
+2025-04-21 17:03:26 INFO     Menu button is clickable!
+2025-04-21 17:03:26 INFO     Button 'Menu' click OK
+2025-04-21 17:03:34 INFO     Reporte Inventario descargado.
+2025-04-21 17:03:48 INFO     Menu button is clickable!
+2025-04-21 17:03:48 INFO     Button 'Menu' click OK
+2025-04-21 17:04:01 INFO     Reporte Producto descargado.
+2025-04-21 17:04:11 INFO     All Excel files have been processed!
+2025-04-21 17:04:45 INFO     Removed all matched files!
+2025-04-21 17:04:57 INFO     Login exitoso!!!
+2025-04-21 17:05:08 INFO     Menu button is clickable!
+2025-04-21 17:05:09 INFO     Button 'Menu' click OK
+2025-04-21 17:05:14 INFO     Button 'Últimos 7 días' click OK
+2025-04-21 17:05:19 INFO     Button 'Exportar' click OK
+2025-04-21 17:05:24 INFO     Button 'Descargar' click OK
+2025-04-21 17:05:24 INFO     Reporte ventas descargado.
+2025-04-21 17:05:37 INFO     Menu button is clickable!
+2025-04-21 17:05:38 INFO     Button 'Menu' click OK
+2025-04-21 17:05:41 INFO     Button 'Exportar' click OK
+2025-04-21 17:05:46 INFO     Reporte Inventario descargado.
+2025-04-21 17:05:57 INFO     Menu button is clickable!
+2025-04-21 17:05:57 INFO     Button 'Menu' click OK
+2025-04-21 17:06:10 INFO     Reporte Producto descargado.
+2025-04-21 17:06:19 INFO     All Excel files have been processed!
+2025-04-21 17:07:03 INFO     Removed all matched files!
+2025-04-21 17:07:14 INFO     Login exitoso!!!
+2025-04-21 17:07:26 INFO     Menu button is clickable!
+2025-04-21 17:07:26 INFO     Button 'Menu' click OK
+2025-04-21 17:07:31 INFO     Button 'Últimos 7 días' click OK
+2025-04-21 17:07:36 INFO     Button 'Exportar' click OK
+2025-04-21 17:07:42 INFO     Button 'Descargar' click OK
+2025-04-21 17:07:42 INFO     Reporte ventas descargado.
+2025-04-21 17:07:53 INFO     Menu button is clickable!
+2025-04-21 17:07:53 INFO     Button 'Menu' click OK
+2025-04-21 17:07:56 INFO     Button 'Exportar' click OK
+2025-04-21 17:08:01 INFO     Reporte Inventario descargado.
+2025-04-21 17:08:14 INFO     Menu button is clickable!
+2025-04-21 17:08:14 INFO     Button 'Menu' click OK
+2025-04-21 17:08:27 INFO     Reporte Producto descargado.
+2025-04-21 17:08:35 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.txt
+2025-04-21 17:08:36 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.txt
+2025-04-21 17:08:36 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.txt
+2025-04-21 17:08:36 INFO     All Excel files have been processed!
+2025-04-21 17:12:04 INFO     Removed all matched files!
+2025-04-21 17:12:17 INFO     Login exitoso!!!
+2025-04-21 17:12:28 INFO     Menu button is clickable!
+2025-04-21 17:12:28 INFO     Button 'Menu' click OK
+2025-04-21 17:12:33 INFO     Button 'Últimos 7 días' click OK
+2025-04-21 17:12:39 INFO     Button 'Exportar' click OK
+2025-04-21 17:12:44 INFO     Button 'Descargar' click OK
+2025-04-21 17:12:44 INFO     Reporte ventas descargado.
+2025-04-21 17:12:57 INFO     Menu button is clickable!
+2025-04-21 17:12:57 INFO     Button 'Menu' click OK
+2025-04-21 17:13:00 INFO     Button 'Exportar' click OK
+2025-04-21 17:13:05 INFO     Reporte Inventario descargado.
+2025-04-21 17:13:16 INFO     Menu button is clickable!
+2025-04-21 17:13:16 INFO     Button 'Menu' click OK
+2025-04-21 17:13:30 INFO     Reporte Producto descargado.
+2025-04-21 17:13:36 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-inventario.txt
+2025-04-21 17:13:36 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-productos.txt
+2025-04-21 17:13:36 INFO     Converted: D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.xlsx -> D:\ETL\Procesos\FerreteriaSanJuan\Reporte-de-ventas-detallado-por-producto.txt
+2025-04-21 17:13:36 INFO     All Excel files have been processed!
