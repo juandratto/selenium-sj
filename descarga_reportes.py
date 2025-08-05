@@ -47,11 +47,23 @@ options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/pd
 driver = webdriver.Firefox(options=options)  # Make sure chromedriver is installed and in PATH
 
 def menu_button_click(fname):
+    #Validar si hay un dialogo y cerrarlo.
+    try:
+        close_button = WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable((By.XPATH, "//dialog//button[@aria-label='Cerrar']"))
+        )
+        close_button.click()
+        logger.info("Survey closed.")
+    except Exception as e:
+        logger.info(f"Could not close survey: {e}")
+
     # Boton "menú", se debe ocultar para poder encontrar los otros "botones"
     try:
-        menu_button = WebDriverWait(driver, 10).until(
+        menu_button = WebDriverWait(driver, 15).until(
             EC.element_to_be_clickable((By.ID, fname))
         )
+        # Scroll into view in case it's off-screen
+        driver.execute_script("arguments[0].scrollIntoView(true);", menu_button)
         logger.info("Menu button is clickable!")
         menu_button.click()
     except Exception as e:
@@ -68,7 +80,7 @@ driver.get("https://app.miwally.com/")
 
 try:
     # Locate the username/email field and enter the value
-    email_field = WebDriverWait(driver,5).until(
+    email_field = WebDriverWait(driver,10).until(
         EC.element_to_be_clickable((By.ID, "wbof-textfield-username"))  # Adjust the 'name' attribute if necessary
     )
     email_field.send_keys("juand.ratto@gmail.com")  # Replace with your email
@@ -83,7 +95,7 @@ else:
 
 try:
     # Locate the password field and enter the value
-    password_field =  WebDriverWait(driver,5).until(
+    password_field =  WebDriverWait(driver,10).until(
         EC.element_to_be_clickable((By.ID, "wbof-textfield-password"))  # Adjust the 'name' attribute if necessary
     )
     password_field.send_keys("R4tt0Wally$2023")  # Replace with your password
@@ -98,26 +110,33 @@ else:
 
 try:
     # Alternatively, you can click the "Login" button:
-    login_button =  WebDriverWait(driver,5).until(
-        EC.element_to_be_clickable((By.ID, "wbof-button-signin"))
+    wait = WebDriverWait(driver, 15)  # max wait time: 10 seconds
+    buttons = wait.until(EC.presence_of_all_elements_located((By.XPATH, "//button[contains(@id, 'signin')]")))
+    
+    # Wait until the login button is clickable
+    login_button = WebDriverWait(driver, 15).until(
+        EC.element_to_be_clickable(buttons[0])
     )
     login_button.click()
+
 except TimeoutException:
-    logger.info("The button 'wbof-button-signin' did not load in time.")
+    logger.info("The button 'wacc-button-signin' did not load in time.")
     driver.quit()
 except Exception as e:
     logger.info(f"An unexpected error occurred: {e}")
     driver.quit()
 else:
-    logger.info("Texfield 'wbof-button-signin' click OK")
+    logger.info("Texfield 'wacc-button-signin' click OK")
 
 logger.info("Login exitoso!!!")
 
 # Allow time for the login to process
-time.sleep(7)  # Adjust this sleep time based on how long the login takes
+time.sleep(10)  # Adjust this sleep time based on how long the login takes
 
 # Optionally, you can directly navigate to the 'Report Detail' page after login
 driver.get("https://app.miwally.com/Report/Detail")
+
+time.sleep(10)
 
 menu_button_click("wbof-option-menu")
 
@@ -125,7 +144,7 @@ time.sleep(5)
 
 ## Boton "ultimos 7 dias"
 try:
-    wait = WebDriverWait(driver, 10)  # max wait time: 10 seconds
+    wait = WebDriverWait(driver, 15)  # max wait time: 10 seconds
     button = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'Últimos 7 días')]")))
     button.click()
 except TimeoutException:
@@ -141,7 +160,7 @@ time.sleep(5)
 
 # Download the report 'Ultimos 7 días' -> button 'Exportar'
 try:
-    wait = WebDriverWait(driver, 10)  # max wait time: 10 seconds
+    wait = WebDriverWait(driver, 20)  # max wait time: 10 seconds
     button = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'Exportar')]")))
     button.click()
 except TimeoutException:
@@ -153,15 +172,15 @@ except Exception as e:
 else:
     logger.info("Button 'Exportar' click OK")
 
-time.sleep(5)
+time.sleep(15)
 
 # Download Ventas por Producto
 try:
-    wait = WebDriverWait(driver, 10)  # max wait time: 10 seconds
+    wait = WebDriverWait(driver, 15)  # max wait time: 10 seconds
     buttons = wait.until(EC.presence_of_all_elements_located((By.XPATH, "//button[contains(text(), 'Descargar')]")))
     if len(buttons) >= 2:
         # Wait until the second one is clickable
-        second_button = WebDriverWait(driver, 10).until(
+        second_button = WebDriverWait(driver, 15).until(
             EC.element_to_be_clickable(buttons[1])
         )
         second_button.click()
@@ -180,12 +199,12 @@ time.sleep(5)
 ## Descargar el reporte de inventario
 #directly navigate to the 'Report Inventory' page after login
 driver.get("https://app.miwally.com/Inventory")
-time.sleep(5)
+time.sleep(10)
 
 # # Clic en el 'menu'
 menu_button_click("wbof-option-menu")
 
-time.sleep(3)
+time.sleep(5)
 
 # # Download the report
 try:
@@ -231,8 +250,12 @@ os.makedirs(output_path, exist_ok=True)
 
 # Iterate over all Excel files in the directory
 for file in glob.glob(os.path.join(input_path, 'Reporte*.xlsx')):
-    # Read the Excel file
-    df = pd.read_excel(file)
+    
+    try:
+        # Read the Excel file
+        df = pd.read_excel(file)
+    except Exception as e:
+        logger.info(f"An unexpected error occurred: {e}")
     
     # Get the base filename without the extension
     base_name = os.path.basename(file).replace('.xlsx', '.txt')
@@ -240,10 +263,12 @@ for file in glob.glob(os.path.join(input_path, 'Reporte*.xlsx')):
     # Define the output file path
     output_file = os.path.join(output_path, base_name)
     
-    # Save the DataFrame as a tab-delimited text file
-    df.to_csv(output_file, sep='\t', index=False,  encoding='latin1')
-    
-    logger.info(f"Converted: {file} -> {output_file}")
+    try:
+        # Save the DataFrame as a tab-delimited text file
+        df.to_csv(output_file, sep='\t', index=False,  encoding='latin1')
+        logger.info(f"Converted: {file} -> {output_file}")
+    except Exception as e:
+        logger.info(f"An unexpected error occurred: {e}")
 
 logger.info("All Excel files have been processed!")
 
