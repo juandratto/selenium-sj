@@ -99,7 +99,7 @@ try:
     password_field =  WebDriverWait(driver,10).until(
         EC.element_to_be_clickable((By.ID, "wbof-textfield-password"))  # Adjust the 'name' attribute if necessary
     )
-    password_field.send_keys("R4tt0Wally$2023")  # Replace with your password
+    password_field.send_keys("R4tt0Wally$2025")  # Replace with your password
 except TimeoutException:
     logger.info("Texfield 'wbof-textfield-password' did not load in time.")
     driver.quit()
