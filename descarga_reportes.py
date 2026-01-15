@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 import time
 import os, glob
 import pandas as pd
@@ -140,6 +141,21 @@ time.sleep(10)
 
 menu_button_click("wbof-option-menu")
 
+# Cierro el dialogo de sunat
+try:
+    wait = WebDriverWait(driver, 10)  # max wait time: 10 seconds
+    button = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'vender')]")))
+    button.click()
+except TimeoutException:
+    logger.info("No se encuentra el boton para cerrar el dialogo")
+    #driver.quit()
+except Exception as e:
+    logger.info(f"An unexpected error occurred: {e}")
+    driver.quit()
+else:
+    logger.info("Button 'Empezar a vender' click OK")
+
+
 time.sleep(5)
 
 ## Boton "ultimos 7 dias"
@@ -176,11 +192,11 @@ time.sleep(15)
 
 # Download Ventas por Producto
 try:
-    wait = WebDriverWait(driver, 15)  # max wait time: 10 seconds
+    wait = WebDriverWait(driver, 10)  # max wait time: 10 seconds
     buttons = wait.until(EC.presence_of_all_elements_located((By.XPATH, "//button[contains(text(), 'Descargar')]")))
     if len(buttons) >= 2:
         # Wait until the second one is clickable
-        second_button = WebDriverWait(driver, 15).until(
+        second_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(buttons[1])
         )
         second_button.click()
